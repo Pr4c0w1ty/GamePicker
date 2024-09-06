@@ -19,7 +19,7 @@ You can download the latest version of **GamePicker** as a standalone executable
 3. Run the downloaded file on your Windows machine.
 
 *Note: Running the executable does not require Python to be installed on your system.*
-*Note: You still need to have your Steam API key*
+*but you still need to have your Steam API key*
 
 ## Getting a Steam API Key
 To use GamePicker, you need to obtain a Steam API key. Follow these steps:
