@@ -1,0 +1,4 @@
+# Ignore PyInstaller build folders
+build/
+dist/
+GamePicker.spec
