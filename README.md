@@ -10,16 +10,17 @@
 - Randomly selects a game from the list of common games.
 - Lightweight and easy to use from the command line.
 
+## Quick Start
 
+You can download the latest version of **GamePicker** as a standalone executable file:
 
-## Prerequisites
+1. Go to the [Releases](https://github.com/Pr4c0w1ty/GamePicker/releases) page.
+2. Download the `.exe` file from the latest release.
+3. Run the downloaded file on your Windows machine.
 
-- Python 3.x installed on your system.
-- A valid Steam API key.
-- `requests` library installed. You can install it using:
-```bash
-pip install requests
-```
+*Note: Running the executable does not require Python to be installed on your system.*
+*Note: You still need to have your Steam API key*
+
 ## Getting a Steam API Key
 To use GamePicker, you need to obtain a Steam API key. Follow these steps:
 
@@ -28,6 +29,16 @@ To use GamePicker, you need to obtain a Steam API key. Follow these steps:
 - Enter a domain name. If you don’t have a domain, you can use localhost or any placeholder domain.
 - Click on "Register" to obtain your API key.
 - Copy the API key provided, you will use it in the GamePicker program.
+  
+## Prerequisites
+
+- Python 3.x installed on your system.
+- A valid Steam API key.
+- `requests` library installed. You can install it using:
+```bash
+pip install requests
+```
+
 ## Installation
 
 Clone the repository to your local machine:
