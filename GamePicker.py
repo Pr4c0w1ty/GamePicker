@@ -40,3 +40,7 @@ if how_many > n:
 for game in range(how_many):
     g = random.randint(0, n - 1)
     print(f'https://store.steampowered.com/app/{common_appids[g]}')
+
+x = input('Press Enter to exit . . . \n')
+if x == '':
+    exit()
