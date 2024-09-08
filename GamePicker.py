@@ -1,7 +1,43 @@
 import requests
 import random
+from dotenv import load_dotenv
+import os
 
-api_key = input('Enter your Steam API key: ')
+
+# Load environment variables from .env file
+load_dotenv()
+
+# Check if the API key is already saved in the .env file
+api_key = os.getenv('STEAM_API_KEY')
+
+if not api_key:
+    # Prompt the user for their API key if it's not saved
+    api_key = input('Enter your Steam API key: ')
+    
+    # Ask if the user wants to save the key for future use
+    save_key = input('Do you want to save this API key for future use? (y/n): ').strip().lower()
+    
+    if save_key == 'y':
+        # Save the API key in the .env file
+        with open('.env', 'a') as env_file:
+            env_file.write(f'STEAM_API_KEY={api_key}\n')
+        print('API key saved successfully.')
+
+else:
+    print(f"Using saved API key")
+
+    change_key = input('Do you want to change the API key? (y/n): ').strip().lower()
+    if change_key == 'y':
+        api_key = input('Enter your new Steam API key: ')
+        # Ask if the user wants to save the key for future use
+        save_key = input('Do you want to save this API key for future use? (y/n): ').strip().lower()
+    
+        if save_key == 'y':
+            # Save the API key in the .env file
+            with open('.env', 'a') as env_file:
+                env_file.write(f'STEAM_API_KEY={api_key}\n')
+            print('API key saved successfully.')
+
 accounts_num = int(input('Enter the number of accounts: '))
 accounts_games_data = {}
 
